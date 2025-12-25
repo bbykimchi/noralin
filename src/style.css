@@ -5,36 +5,86 @@
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: sans-serif;
-  line-height: 1.6;
-}
-
-.navbar {
+.company-name {
   display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background: #333;
-  color: white;
-  position: sticky;
-  top: 0;
-}
-
-.links a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-}
-
-.section {
-  min-height: 100vh;
+  line-height: normal;
+  font-size: xx-large;
   padding: 2rem;
+  padding-top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.hero { background: #f4f4f4; }
-.about { background: #fff; }
-.contact { background: #e0e0e0; }
+.logo {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.contact-button {
+    padding: 0.8rem;
+    font-weight: bold;
+    line-height: 1;
+    border-radius: 3px;
+    background-color: white; /* button color */
+    color: black; /* text color */
+    border-color: black;
+    &:hover{
+        background-color: blue;
+    }
+}
+
+/* Functionality for scroll "SUPPORTING YOUR..." */
+.buzzword-container { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.static-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.scroll-box {
+  height: 50px;
+  width: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-content {
+  position: absolute;
+  width: 100%;
+  text-align: left; /* alignment in box */
+  animation: scroll-swish 8s infinite; /* speed of animation */
+}
+
+.scroll-item {
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: aquamarine;
+}
+
+@keyframes scroll-swish {
+  0%, 15%   { transform: translateY(0%); }         
+  20%, 35%  { transform: translateY(-16.66%); }    
+  40%, 55%  { transform: translateY(-33.33%); }   
+  60%, 75%  { transform: translateY(-50%); }       
+  80%, 95%  { transform: translateY(-66.66%); }    
+  100%      { transform: translateY(-83.33%); }    
+}
