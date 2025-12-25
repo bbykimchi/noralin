@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #333;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero { background: #f4f4f4; }
+.about { background: #fff; }
+.contact { background: #e0e0e0; }
